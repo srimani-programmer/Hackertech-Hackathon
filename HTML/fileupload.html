@@ -1,0 +1,159 @@
+<head>
+    <title>Encrypt of file</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+  </script>
+    <style type="text/css">
+    body{
+        background: url('Images/military4.jpg');
+        background-size: cover;
+    }
+
+        .login-box{
+    width:600px;
+    height: 400px;
+    background: white;
+    color: #898e84;
+    top: 50%;
+    left: 60%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 10px 30px;
+}
+
+#choose
+{
+     width: 200px;
+    margin-bottom: 40px;
+    color: #898e84;
+    border-bottom: 1px solid #8b9099;
+    background: transparent;
+    height: 25px;
+    color: #898e84
+    font-size: 16px;
+}
+#password{
+    border-bottom: 1px solid #8b9099;
+    height: 25px;
+    color: #898e84
+    font-size: 16px;
+}
+#button
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 140px;
+    margin-left: 300px;
+    background: red;
+    color: white;
+    font-size: 18px;
+}
+#button1
+{
+    color: black;
+    font-size: 18px;
+    margin-left: 40px;
+}
+#button:hover
+{
+    cursor: pointer;
+    background: #898e84;
+    color: white;
+}
+a{
+    padding-left: 90px;
+    text-decoration: none;
+    color: #898e84;
+}
+a:hover{
+    color: red;
+}
+.head{
+    
+    margin-bottom: 40px;
+    color: red;
+}
+p{
+    padding-left: 20px;
+    color: #898e84}
+#captcha{
+    background-image: url('Images/sri6.jpg');
+    background-size: cover;
+    border: 1px solid #8b9099;
+    color: #898e84;
+    cursor: no-drop;
+    font-size: 25px;
+    height: 40px;
+    width: 140px;
+    margin-left: 50px;
+    padding-left: 25px;
+    border-radius: 40px;
+}
+::placeholder {
+    color: #898e84;
+    opacity: 1;
+}
+::value {
+    color: #898e84;
+    opacity: 1;
+    }
+    #flex{
+    	display: flex;
+    	flex-direction: row;
+    }
+    #profile{
+        color: black;
+        background: black;
+        height: 40px;
+        font-size: 20px;
+    }
+    #prof{
+    	color: white;
+    	position: absolute;
+    	top: 2%;
+    	right: 2%;
+    }
+    #find{
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+</head>
+    <body id="myimage">
+    	<div id="profile">
+        <li class="dropdown" id="prof">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>cadet1<span class="caret"></span></a>
+            <ul class="dropdown-menu" style="background: grey;color: white;">
+              <li><a href="profile.php">profile</a></li>
+              <li><a href="files.php">files</a></li>
+              <li><a href="logout.php">logout</a></li>
+            </ul>
+        </li>
+    </div>
+    <div class="login-box">
+        <h1 class="head">Please Upload File To Encrypt</h1>
+            <form name="form"  action="find.php" method="post">
+            <div id="find"><select name="filetype" id="choose">
+			    <option value="image">image</option>
+			    <option value="pdf">pdf</option>
+			    <option value="xlsx">xlsxt</option>
+			    <option value="word">word</option>
+			  </select><input type="file" name="file" value="Browse" placeholder="Browse" id="button1"></div><br>
+            <h2>Enter Your password</h2><input type="password" name="passsword" id="password"><br>
+            <input type="submit" name="submit" value="Encrypt" id="button">
+            </form>
+        </div>
+
+    </body>
+</html>

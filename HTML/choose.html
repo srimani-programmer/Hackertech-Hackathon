@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Login Form</title>
+    <script type="text/javascript">
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+  </script>
+    <style type="text/css">
+    body{
+        background: url('Images/military2.jpg');
+        background-size: cover;
+    }
+    #button
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 140px;
+    margin-left: 30px;
+    margin-top: 20px;
+    background: lightgreen;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+#button1
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 140px;
+    margin-left:20px;
+     margin-top: 20px;
+    background: lightgreen;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+#button:hover,#button1:hover
+{
+    cursor: pointer;
+    background: #898e84;
+    color: white;
+}
+
+        
+</style>
+</head>
+    <body id="myimage">
+        <h2 style="color: white;margin-top: 10px;">Please choose your action</h2>
+        <input type="submit" name="submit" value="Encrypt" id="button"><input type="submit" name="submit" value="Decrypt" id="button1"><br><br><br>
+    </body>
+</html>
